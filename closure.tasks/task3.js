@@ -2,13 +2,13 @@
 function createCachingFunction() {
   const cacheObj = {};
   return function (num) {
-    if (cacheObj.hasOwnProperty("value")) {
+    if (cacheObj.hasOwnProperty(num)) {
       console.log("CACHED");
-      return cacheObj.value;
+      return cacheObj[num];
     }
-    cacheObj.value = num * 2;
+    cacheObj[num] = num * 2;
     console.log("CALCULATED");
-    return cacheObj.value;
+    return cacheObj[num];
   };
 }
 

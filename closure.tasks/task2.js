@@ -1,3 +1,4 @@
+"use strict";
 function privateVariable(value) {
   const result = {
     _variable: value,
@@ -13,6 +14,7 @@ function privateVariable(value) {
 
   Object.defineProperty(result, "_variable", {
     enumerable: false,
+    configurable: false,
   });
 
   return result;

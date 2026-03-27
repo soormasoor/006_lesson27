@@ -1,5 +1,5 @@
 "use strict";
-function createPerson(name = "", age = -1) {
+function createPerson(name = "", age = null) {
   const result = {
     _name: name,
     _age: age,

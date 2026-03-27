@@ -1,3 +1,4 @@
+"use strict";
 function createCalculator(operation) {
   const operations = {
     add: (a, b) => a + b,
